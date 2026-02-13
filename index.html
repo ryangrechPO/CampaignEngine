@@ -1,0 +1,725 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Senior Product Manager Assignment - Campaign Engine</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3025898a-1e1e-8069-8c61-fd78d665519b" class="page sans"><header><h1 class="page-title" dir="auto">Senior Product Manager Assignment - Campaign Engine</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="3025898a-1e1e-807e-bdbd-eacc6a389721" class="">Executive Summary </h2></div><div style="display:contents" dir="auto"><p id="3025898a-1e1e-807d-a85e-c4ba74fc62a4" class="">A modular, rule based campaign engine that allows operators to design, automate and optimize player promotions without engineering intervention.  The campaign engine will allow operators to create flexible, rule driven campaigns by</p></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-8027-9b84-e6e0e705be9a" class="bulleted-list"><li style="list-style-type:disc">listen to player behaviour triggers (internally or externally)</li></ul></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-808a-a510-edb59aec5a0f" class="bulleted-list"><li style="list-style-type:disc">determining eligibility based on specific player segments</li></ul></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-800e-b292-ea89e6ad6db9" class="bulleted-list"><li style="list-style-type:disc">giving out rewards according to specified guidelines to achieve positive ROI</li></ul></div><div style="display:contents" dir="auto"><p id="3025898a-1e1e-8051-8a55-e3d4352fbd22" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="3025898a-1e1e-80e2-b3ea-e9d6d0138765" class="">Problem Statement </h2></div><div style="display:contents" dir="auto"><p id="3025898a-1e1e-8040-a091-cd6963cbf362" class="">Campaign systems across iGaming platforms are largely aimed at acquiring new players, retention and engagement. As the industry evolves, so does the demand for more innovative campaign solutions which often outpace the product’s ability to adapt in time. This leads to pain points such as:  </p></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-8051-b915-d4e0ec11957f" class="bulleted-list"><li style="list-style-type:disc">the need to manage bespoke campaigns manually (e.g. determining player eligibility via manual reports, and giving bonuses manually) until the product is able to catch up</li></ul></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-80ba-a7e7-eccd4985bccf" class="bulleted-list"><li style="list-style-type:disc">multiple CRM integration requests to address product gaps in different parts of the campaign life cycle (e.g. not enough segment options in the campaign engine)</li></ul></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-8081-88b1-d0fea3f33d56" class="bulleted-list"><li style="list-style-type:disc">difficulty in knowing for sure whether the campaign will perform well enough before the operator commits to it</li></ul></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-80d8-aa9f-d9c1578937c3" class="bulleted-list"><li style="list-style-type:disc">bonus abusers becoming more creative with their methods, outsmarting the system</li></ul></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-808a-9020-f8ad2d94e5f4" class="bulleted-list"><li style="list-style-type:disc">irrelevant promotions given to players </li></ul></div><div style="display:contents" dir="auto"><ul id="3025898a-1e1e-80a7-ac1d-c11108447b81" class="bulleted-list"><li style="list-style-type:disc">poor communication on expectations and reward mechanics</li></ul></div><div style="display:contents" dir="auto"><h2 id="3025898a-1e1e-80eb-8e79-e77648d3392c" class="">Product Vision </h2></div><div style="display:contents" dir="auto"><p id="3025898a-1e1e-8023-af69-dc03346e8f07" class="">A next gen, UX aware campaign engine which allows enough flexibility to design, review, launch and measure promotional campaigns tailored to specific markets and jurisdictions, generating ROI for the operator’s casino with ease.</p></div><div style="display:contents" dir="auto"><h2 id="3025898a-1e1e-8083-a49e-cd32320ea0ba" class="">Entity Relationship Diagram</h2></div><div style="display:contents" dir="auto"><p id="3035898a-1e1e-8029-81a3-f60101c95244" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="3055898a-1e1e-805f-9320-f3f37e43757d" class="image"><a href="Entity.drawio.png"><img style="width:624px" src="Entity.drawio.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="3055898a-1e1e-8079-a9d9-c889dc7e8c28"><div class="source"><a href="https://www.notion.soundefined"></a></div></figure></div><div style="display:contents" dir="auto"><h2 id="3035898a-1e1e-800f-b5a6-fcf8b3799cc3" class="">Proposed Design</h2></div><div style="display:contents" dir="auto"><ol type="1" id="3025898a-1e1e-802c-a8b4-dcb79ae3672d" class="numbered-list" start="1"><li>The campaign engine shall be a wizard style which splits the campaign creation in 3 simple steps: <div style="display:contents" dir="auto"><ol type="a" id="3035898a-1e1e-8096-8899-e00ae745429d" class="numbered-list" start="1"><li>Basic Campaign Setup</li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="3035898a-1e1e-8056-82be-caa21db44e0e" class="numbered-list" start="2"><li>Player Eligibility</li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="3035898a-1e1e-803d-86e6-f7925971c746" class="numbered-list" start="3"><li>Reward Config &amp; Distribution</li></ol></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3055898a-1e1e-80d9-8e3a-fa8aa5ffa5a6" class="numbered-list" start="2"><li>Each step shall represent the building blocks of the campaign which contains specific configuration details that the campaign manager is expected to define in the day to day operations</li></ol></div><div style="display:contents" dir="auto"><p id="3065898a-1e1e-80de-95c2-d988846ee880" class="">
+</p></div><div style="display:contents" dir="auto"><p id="3065898a-1e1e-80fe-8193-c6e192afb5d1" class="">Design Link Here : <a href="https://miro.com/app/board/uXjVGBGUpsQ=/?share_link_id=355082179772">https://miro.com/app/board/uXjVGBGUpsQ=/?share_link_id=355082179772</a></p></div><div style="display:contents" dir="auto"><p id="3065898a-1e1e-804b-a2fa-faa99549d92e" class="">Lovable Link Here : <a href="https://lovable.dev/projects/2f54a392-f05a-4617-9f9b-9f7c52e6451e">Campaign Weaver - Lovable</a></p></div><div style="display:contents" dir="auto"><p id="3055898a-1e1e-80e5-a146-cf56b3ea454c" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="3055898a-1e1e-8036-bdb4-df18892cb043" class=""><strong>Step 1 - Basic Campaign Setup</strong></h3></div><div style="display:contents" dir="ltr"><table id="3025898a-1e1e-802f-a009-d0d7bf619c33" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="3025898a-1e1e-8015-8d4c-c6ea50f90196"><th id="iDGy" class="block-color-gray_background simple-table-header" style="width:218.02084350585938px">Name</th><th id="M}n\" class="block-color-gray_background simple-table-header">Input Type</th><th id="{cJm" class="block-color-gray_background simple-table-header">Validation</th><th id="ZdXc" class="block-color-gray_background simple-table-header" style="width:456.9583435058594px">Description</th><th id="Bm{^" class="block-color-gray_background simple-table-header" style="width:244.9791717529297px">Example</th><th id="?ead" class="block-color-gray_background simple-table-header" style="width:89px"><strong>MVP</strong></th><th id="|~}[" class="block-color-gray_background simple-table-header" style="width:87px"><strong>Non-MVP</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="3025898a-1e1e-80fd-babb-d4470241e003"><td id="iDGy" class="" style="width:218.02084350585938px">Campaign Name (key) </td><td id="M}n\" class="">Text Field</td><td id="{cJm" class="">Mandatory</td><td id="ZdXc" class="" style="width:456.9583435058594px">A unique identifier/key for the campaign which may be used as an external reference in conjunction with external systems <br/>(like a headless CMS)</td><td id="Bm{^" class="" style="width:244.9791717529297px">WC_First_Deposit_10_EUR_25_FS</td><td id="?ead" class="" style="width:89px">x</td><td id="|~}[" class="" style="width:87px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3025898a-1e1e-802a-98ff-de12afc6b71d"><td id="iDGy" class="" style="width:218.02084350585938px">Campaign Display Name </td><td id="M}n\" class="">Text Field</td><td id="{cJm" class="">Mandatory</td><td id="ZdXc" class="" style="width:456.9583435058594px">A user friendly name to be displayed in the OMS</td><td id="Bm{^" class="" style="width:244.9791717529297px">Welcome Campaign €10 + 25 Free Spins </td><td id="?ead" class="" style="width:89px">x</td><td id="|~}[" class="" style="width:87px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3025898a-1e1e-8011-9eb4-d0dc866bb64f"><td id="iDGy" class="" style="width:218.02084350585938px">Description</td><td id="M}n\" class="">Text Field</td><td id="{cJm" class="">Optional</td><td id="ZdXc" class="" style="width:456.9583435058594px">A short description of what the campaign does</td><td id="Bm{^" class="" style="width:244.9791717529297px">This is a welcome campaign</td><td id="?ead" class="" style="width:89px">x</td><td id="|~}[" class="" style="width:87px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3025898a-1e1e-80c1-bb5a-fabdb69c7836"><td id="iDGy" class="" style="width:218.02084350585938px">Currency </td><td id="M}n\" class="">Selector</td><td id="{cJm" class="">Mandatory</td><td id="ZdXc" class="" style="width:456.9583435058594px">The currency of the campaign </td><td id="Bm{^" class="" style="width:244.9791717529297px">EUR</td><td id="?ead" class="" style="width:89px">x</td><td id="|~}[" class="" style="width:87px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3025898a-1e1e-8041-8bd0-d74ac818c619"><td id="iDGy" class="" style="width:218.02084350585938px">Start Date/Time </td><td id="M}n\" class="">Timestamp</td><td id="{cJm" class="">Mandatory</td><td id="ZdXc" class="" style="width:456.9583435058594px">The date/time in the player’s timezone when the promotional campaign starts</td><td id="Bm{^" class="" style="width:244.9791717529297px">2026-02-11T16:42:35+01:00</td><td id="?ead" class="" style="width:89px">x</td><td id="|~}[" class="" style="width:87px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3025898a-1e1e-80b4-b118-f81daa334852"><td id="iDGy" class="" style="width:218.02084350585938px">End Date/Time </td><td id="M}n\" class="">Timestamp</td><td id="{cJm" class="">Mandatory</td><td id="ZdXc" class="" style="width:456.9583435058594px">The date/time in the player’s timezone when the promotional campaign stops</td><td id="Bm{^" class="" style="width:244.9791717529297px">2026-02-15T16:42:35+01:00</td><td id="?ead" class="" style="width:89px">x</td><td id="|~}[" class="" style="width:87px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3045898a-1e1e-80de-b6fa-f8c29dbaa5b1"><td id="iDGy" class="" style="width:218.02084350585938px">Campaign Priority</td><td id="M}n\" class="">Text Field</td><td id="{cJm" class="">Optional</td><td id="ZdXc" class="" style="width:456.9583435058594px">The priority of the campaign vs others in the offer stack</td><td id="Bm{^" class="" style="width:244.9791717529297px">2</td><td id="?ead" class="" style="width:89px"></td><td id="|~}[" class="" style="width:87px">x</td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-809f-80ee-cc072e22a7f3"><td id="iDGy" class="" style="width:218.02084350585938px">Campaign Scheduling </td><td id="M}n\" class="">Module</td><td id="{cJm" class="">Optional</td><td id="ZdXc" class="" style="width:456.9583435058594px">Defines whether a campaign runs once or repeats itself</td><td id="Bm{^" class="" style="width:244.9791717529297px">Every Monday and Thursday </td><td id="?ead" class="" style="width:89px"></td><td id="|~}[" class="" style="width:87px">x</td></tr></div></tbody></table></div><div style="display:contents" dir="ltr"><figure id="3045898a-1e1e-80c7-b011-de61ee73f2be" class="image" style="text-align:left"><a href="image.png"><img style="width:1344px" src="image.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="3055898a-1e1e-800f-b208-ff43c6dcebe7" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="3055898a-1e1e-80ad-b62e-c21e7b7dc029" class=""><strong>Step 2 - Player Eligibility </strong></h3></div><div style="display:contents" dir="ltr"><table id="3055898a-1e1e-805b-8ea0-e562b0a455fd" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-800c-8bb4-ce3a54aa839b"><th id="&gt;gu^" class="block-color-gray_background simple-table-header" style="width:234.97918701171875px">Name</th><th id="hZm}" class="block-color-gray_background simple-table-header" style="width:109px"><strong>Input Type</strong></th><th id="PQNL" class="block-color-gray_background simple-table-header" style="width:107px">Validation</th><th id="NnSe" class="block-color-gray_background simple-table-header" style="width:455px"><strong>Description</strong></th><th id="HwZk" class="block-color-gray_background simple-table-header" style="width:249px"><strong>Example</strong></th><th id="pcbr" class="block-color-gray_background simple-table-header" style="width:70px"><strong>MVP</strong></th><th id="ke=I" class="block-color-gray_background simple-table-header" style="width:79px"><strong>Non-MVP</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-801b-854d-fbbe807b93a5"><td id="&gt;gu^" class="" style="width:234.97918701171875px">Import Player List - via CSV</td><td id="hZm}" class="" style="width:109px">File Upload</td><td id="PQNL" class="" style="width:107px">Optional<br/>File + Data</td><td id="NnSe" class="" style="width:455px">Allows the campaign manager to upload a manual csv list of player IDs <br/>Operations that can be done are <br/> - include<br/> - exclude<br/><br/>Player IDs alone are enough as they will get processed further via player segments. If no player list is uploaded, it is assumed that the promotion is open to all</td><td id="HwZk" class="" style="width:249px"><mark class="highlight-gray"><code>[ “316546”, “64879654”, 546545”….]</code></mark></td><td id="pcbr" class="" style="width:70px">x</td><td id="ke=I" class="" style="width:79px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-803f-b9de-c81c11e7690b"><td id="&gt;gu^" class="" style="width:234.97918701171875px">Import Player List - via Webhook</td><td id="hZm}" class="" style="width:109px">Webhook</td><td id="PQNL" class="" style="width:107px">Optional</td><td id="NnSe" class="" style="width:455px">Allows the campaign manager to sync external systems which send player data to the campaign engine. <br/>Operations that can be done are <br/> - include<br/> - exclude<br/><br/>Player IDs alone are enough as they will get processed further via player segments. If no player list is uploaded, it is assumed that the promotion is open to all</td><td id="HwZk" class="" style="width:249px"><mark class="highlight-gray"><code>[ “316546”, “64879654”, 546545”….]</code></mark></td><td id="pcbr" class="" style="width:70px"></td><td id="ke=I" class="" style="width:79px">x</td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-800b-a99f-e71926224478"><td id="&gt;gu^" class="" style="width:234.97918701171875px">Player Segments<br/>[Attributes]</td><td id="hZm}" class="" style="width:109px">Selectors</td><td id="PQNL" class="" style="width:107px">Optional<br/>enum</td><td id="NnSe" class="" style="width:455px">Allows the campaign manager to segment the preceeding player list (if available) based on basic player attributes like: <br/> - VIP Tier<br/> - KYC Status<br/> - Registration Source <br/> - Country<br/> - Registration Date<br/> - Age</td><td id="HwZk" class="" style="width:249px"><mark class="highlight-gray"><code>{<br/>&quot;vip_tier&quot;: &quot;Gold&quot;,<br/>&quot;kyc_status&quot;: &quot;Verified&quot;,<br/>&quot;registration_source&quot;: &quot;Affiliate&quot;,<br/>&quot;country&quot;: &quot;MT&quot;,<br/>&quot;registration_date&quot;: &quot;2025-11-01&quot;,<br/>&quot;age&quot;: 25<br/>}  </code></mark></td><td id="pcbr" class="" style="width:70px">x</td><td id="ke=I" class="" style="width:79px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-80e9-93e3-d180f45f01f7"><td id="&gt;gu^" class="" style="width:234.97918701171875px">Player Segments<br/>[Lifecycle]</td><td id="hZm}" class="" style="width:109px">Selectors</td><td id="PQNL" class="" style="width:107px">Optional<br/>boolean</td><td id="NnSe" class="" style="width:455px">Allows the campaign manager to segment the preceeding player list (if available) based on the stage of the player lifecycle using industry standard definitions such as <br/> - Non Depositor (i.e. registered but hasn’t made a deposit yet)<br/> - First Time Depositor (i.e. made a deposit within 0 to 7 days of registering) <br/> - Active Players (i.e. has made a bet in the last 7 days)<br/> - Dormant (has not made a bet in the last 7 to 30 days)<br/> - Churned (has not made a bet in the last 30 to 90 days)</td><td id="HwZk" class="" style="width:249px"><mark class="highlight-gray"><code>{<br/>&quot;player_status&quot;: {<br/>   &quot;non_depositor&quot;: false,<br/>   &quot;first_time_depositor&quot;: false,<br/>   &quot;active_player&quot;: true,<br/>   &quot;dormant&quot;: false,<br/>   &quot;churned&quot;: false<br/>   }<br/>}</code></mark></td><td id="pcbr" class="" style="width:70px">x</td><td id="ke=I" class="" style="width:79px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-8055-9310-e590ecd909f0"><td id="&gt;gu^" class="" style="width:234.97918701171875px">Player Segments<br/>[Value]</td><td id="hZm}" class="" style="width:109px">Selectors</td><td id="PQNL" class="" style="width:107px">Optional<br/>boolean</td><td id="NnSe" class="" style="width:455px">Allows the campaign manager to segment the preceeding player list (if available) based on the player’s montetary value like<br/> - High Roller<br/> - Mid Values<br/> - Low Value </td><td id="HwZk" class="" style="width:249px"><mark class="highlight-gray"><code>{<br/>&quot;player_value&quot;: {<br/>   &quot;high_roller&quot;: true,<br/>   &quot;mid_value&quot;: false,<br/>   &quot;low_value&quot;: false<br/>}</code></mark></td><td id="pcbr" class="" style="width:70px">x</td><td id="ke=I" class="" style="width:79px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-80fd-929f-fd857c981d23"><td id="&gt;gu^" class="" style="width:234.97918701171875px">Custom Segments</td><td id="hZm}" class="" style="width:109px">Selectors</td><td id="PQNL" class="" style="width:107px">N/A</td><td id="NnSe" class="" style="width:455px">Allows the campaign manager the ability to create a custom segment by combining some data criteria </td><td id="HwZk" class="" style="width:249px"></td><td id="pcbr" class="" style="width:70px"></td><td id="ke=I" class="" style="width:79px">x</td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-805c-a958-f4b13397c957"><td id="&gt;gu^" class="" style="width:234.97918701171875px">Calculated Segments</td><td id="hZm}" class="" style="width:109px">Selectors</td><td id="PQNL" class="" style="width:107px">N/A</td><td id="NnSe" class="" style="width:455px">Allows the campaign manager to segment players based on their gaming activity and behaviour for example<br/> - Risk of Churn<br/> - Game Preferences (Slots, Live Casino)<br/> - Net Loss<br/> </td><td id="HwZk" class="" style="width:249px"></td><td id="pcbr" class="" style="width:70px"></td><td id="ke=I" class="" style="width:79px">x</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><ol type="1" id="3055898a-1e1e-8056-8e0d-fa9a23c75a24" class="numbered-list" start="1"><li>Player Eligibility can be defined in two modes: <div style="display:contents" dir="auto"><ol type="a" id="3055898a-1e1e-8034-a6f6-cf0ea9b14efa" class="numbered-list" start="1"><li>Manual Assignment </li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="3055898a-1e1e-80f9-8f78-c6fbe439331b" class="numbered-list" start="2"><li>Targeted Assignment (through player segmentation)</li></ol></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3055898a-1e1e-8014-a2c5-c73a3b3a4e19" class="numbered-list" start="2"><li>In <strong>Manual Assignment</strong> mode, all segmentation criteria is hidden, since this promotion will be assigned manually through the backoffice once it is saved</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3055898a-1e1e-8091-ba80-d5488061b3c8" class="numbered-list" start="3"><li>In<strong> Targeted mode, </strong>further segmentation options are available which are<div style="display:contents" dir="auto"><ol type="a" id="3055898a-1e1e-8076-963f-fa8d66057f30" class="numbered-list" start="1"><li>Import Player List, either by <div style="display:contents" dir="auto"><ol type="i" id="3055898a-1e1e-808b-a267-ddc17843b11d" class="numbered-list" start="1"><li>csv upload</li></ol></div><div style="display:contents" dir="auto"><ol type="i" id="3055898a-1e1e-80cb-a8a7-dda1ecea5096" class="numbered-list" start="2"><li>webhook</li></ol></div></li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="3055898a-1e1e-800c-90a0-ec648c26ceb3" class="numbered-list" start="2"><li>Player Segments  </li></ol></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3055898a-1e1e-80dc-9ef2-d2bd67649d0d" class="numbered-list" start="4"><li>Player segments shall be calculated on these events<div style="display:contents" dir="auto"><ol type="a" id="3055898a-1e1e-8025-b740-c733d67a99fb" class="numbered-list" start="1"><li>Login</li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="3055898a-1e1e-802e-a952-f670fcc8d3cf" class="numbered-list" start="2"><li>Deposit</li></ol></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3055898a-1e1e-8092-b5d5-ea8e7c6163e3" class="numbered-list" start="5"><li>Player Segments shall be logically ANDed together</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3055898a-1e1e-8074-96a8-f51cb29494eb" class="numbered-list" start="6"><li>If imported lists are available, these are also to be logically ANDed with the rest of the segments </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3055898a-1e1e-809a-9091-f0d674813d74" class="numbered-list" start="7"><li>The whole step of Player Eligibility may be left untouched, which effectively means that all players are targeted (Open to all). </li></ol></div><div style="display:contents" dir="auto"><p id="3055898a-1e1e-8098-a646-c7159acc534a" class="">
+</p></div><div style="display:contents" dir="auto"><div id="3055898a-1e1e-80ab-90d7-fcc54f08e3c4" class="column-list"><div style="display:contents" dir="auto"><div id="3055898a-1e1e-803b-b506-c2867468aa43" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="3055898a-1e1e-8042-809a-d26982808fbe" class="image"><a href="image%201.png"><img style="width:444.296875px" src="image%201.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="3055898a-1e1e-809b-ad09-deb210d1a10f" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="3055898a-1e1e-803c-b424-c5ec76e7b2fa" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="3055898a-1e1e-80a1-b52b-f987ed9e71c1" class="image"><a href="image%202.png"><img style="width:528px" src="image%202.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="3055898a-1e1e-807e-bb47-e9db92a61ddc" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="3055898a-1e1e-8036-beb9-c6524bc15eb1" class="image"><a href="image%203.png"><img style="width:480px" src="image%203.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="3055898a-1e1e-80a8-a9f7-c682479bc0f9" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><p id="3055898a-1e1e-8015-8cbb-e85646a38542" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="3045898a-1e1e-804d-9bed-deb5dcac828a" class=""><strong>Step 3 - Reward Config &amp; Distribution</strong></h3></div><div style="display:contents" dir="ltr"><table id="3045898a-1e1e-8015-a501-e9602a4ae4c8" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="3045898a-1e1e-807a-a1ce-cc04605910f9"><th id="Is?~" class="block-color-gray_background simple-table-header" style="width:162.08334350585938px">Name</th><th id="GfuC" class="block-color-gray_background simple-table-header" style="width:152px"><strong>Input Type</strong></th><th id="MVMr" class="block-color-gray_background simple-table-header">Validation</th><th id="y[g}" class="block-color-gray_background simple-table-header" style="width:460px"><strong>Description</strong></th><th id="=`Tp" class="block-color-gray_background simple-table-header" style="width:348px"><strong>Example</strong></th><th id="d{DO" class="block-color-gray_background simple-table-header"><strong>MVP</strong></th><th id="^`g@" class="block-color-gray_background simple-table-header"><strong>Non-MVP</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="3045898a-1e1e-80f3-9a85-e86b6ad6a77d"><td id="Is?~" class="" style="width:162.08334350585938px">Reward Type</td><td id="GfuC" class="" style="width:152px">Selector</td><td id="MVMr" class="">enum</td><td id="y[g}" class="" style="width:460px">Allows the campaign manager to select a bonus type reward to configure<br/> - Bonus<br/> - Freespins</td><td id="=`Tp" class="" style="width:348px">N/A</td><td id="d{DO" class="">x</td><td id="^`g@" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-80fc-ab7e-cd0eef837a39"><td id="Is?~" class="" style="width:162.08334350585938px">Reward Template</td><td id="GfuC" class="" style="width:152px">Selector</td><td id="MVMr" class="">enum</td><td id="y[g}" class="" style="width:460px">Allows the campaign manager to select a pre-existing reward template for re-use with the current campaign. Alternatively, a new template may be designed from scratch and saved on the fly</td><td id="=`Tp" class="" style="width:348px">Welcome_Bonus_Template</td><td id="d{DO" class="">x</td><td id="^`g@" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="3045898a-1e1e-80ca-bd95-ec73b2a153f8"><td id="Is?~" class="" style="width:162.08334350585938px">Reward Trigger</td><td id="GfuC" class="" style="width:152px">Combination</td><td id="MVMr" class="">N/A</td><td id="y[g}" class="" style="width:460px">Allows the campaign manager to select the appropriate trigger for each reward type, that the player must fulfill to get offered the reward<br/>Triggers are <br/> - Deposit<br/>   → First Deposit (with an option to specify the date)<br/>   → nth Deposit (with an option to specify the date<br/> - Deposit Date <br/> - Deposit Payment Method<br/> - Deposit Amount (Min)<br/><br/> - Login<br/> - Login Date</td><td id="=`Tp" class="" style="width:348px">Deposit Trigger : First Deposit<br/>Deposit Date : From 02/02/2026<br/>                      : To 13/02/2026<br/><br/>         ———————-AND—————————-<br/>Deposit Payment Method  = Visa<br/></td><td id="d{DO" class="">x</td><td id="^`g@" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-80c3-b706-ecf97a56de79"><td id="Is?~" class="" style="width:162.08334350585938px">Reward Claim Count</td><td id="GfuC" class="" style="width:152px">Combination</td><td id="MVMr" class="">N/A</td><td id="y[g}" class="" style="width:460px">Allows the campaign manager to limit how many times the reward can be claimed</td><td id="=`Tp" class="" style="width:348px">1x per reward, or 2x per campaign</td><td id="d{DO" class="">x</td><td id="^`g@" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-80b6-b20e-d20559903788"><td id="Is?~" class="" style="width:162.08334350585938px">Delivery Method</td><td id="GfuC" class="" style="width:152px">Combination</td><td id="MVMr" class="">N/A</td><td id="y[g}" class="" style="width:460px">Allows the campaign manager control on how should the reward be given whether its<br/> - one time<br/> - staggered </td><td id="=`Tp" class="" style="width:348px"></td><td id="d{DO" class=""></td><td id="^`g@" class="">x</td></tr></div><div style="display:contents" dir="ltr"><tr id="3045898a-1e1e-800d-b912-d35a720d4641"><td id="Is?~" class="" style="width:162.08334350585938px">Reward Expiry</td><td id="GfuC" class="" style="width:152px"></td><td id="MVMr" class=""></td><td id="y[g}" class="" style="width:460px">Allows the campaign manager to specify when the reward expires</td><td id="=`Tp" class="" style="width:348px">after 14 days of claim</td><td id="d{DO" class="">x</td><td id="^`g@" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-8063-8b25-edecce55b19b"><td id="Is?~" class="" style="width:162.08334350585938px">Reward Amount<br/>[Bonus]</td><td id="GfuC" class="" style="width:152px">Combination</td><td id="MVMr" class=""></td><td id="y[g}" class="" style="width:460px">Allows the campaign manager to configure the amount of the bonus reward, which can be either<br/> - a fixed amount<br/> - a percentage match. with an optional bonus cap</td><td id="=`Tp" class="" style="width:348px">EUR100 fixed bonus <br/>35x wagering</td><td id="d{DO" class="">x</td><td id="^`g@" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="3065898a-1e1e-80cb-a3e4-dad5ee034112"><td id="Is?~" class="" style="width:162.08334350585938px">Reward Amount <br/>[Freespins]</td><td id="GfuC" class="" style="width:152px">Combination</td><td id="MVMr" class=""></td><td id="y[g}" class="" style="width:460px">Allows the campaign manager to configure the amount of the bonus reward</td><td id="=`Tp" class="" style="width:348px"></td><td id="d{DO" class="">x</td><td id="^`g@" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="3055898a-1e1e-8000-81b5-ca716ff4615c"><td id="Is?~" class="" style="width:162.08334350585938px">Wagering Requirement<br/>[Bonus]</td><td id="GfuC" class="" style="width:152px"></td><td id="MVMr" class=""></td><td id="y[g}" class="" style="width:460px">Allows the campaign manager to configure the wagering requirement for the bonus</td><td id="=`Tp" class="" style="width:348px">35x</td><td id="d{DO" class=""></td><td id="^`g@" class=""></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><ol type="1" id="3045898a-1e1e-8001-92b7-dd572a557fd5" class="numbered-list" start="1"><li>Bonus/Freespins template selections shall be according to the currency matching with that of the template</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3065898a-1e1e-8077-9555-f1a6d3b91161" class="numbered-list" start="2"><li>Selecting the preconfigured templates means that <code>Wagering Requirement</code> and <code>Reward Amount</code> are read only</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3065898a-1e1e-80c1-a03e-c447f5228452" class="numbered-list" start="3"><li>Multiple Rewards can be linked with a campaign</li></ol></div><div style="display:contents" dir="ltr"><figure id="3065898a-1e1e-8032-a58b-dfb4ea29215e" class="image" style="text-align:left"><a href="image%204.png"><img style="width:912px" src="image%204.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="3065898a-1e1e-8075-ae4c-f6e200c07bf1" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="3065898a-1e1e-800d-bd05-f5217d5ba9b2" class="">Final Review</h3></div><div style="display:contents" dir="ltr"><figure id="3065898a-1e1e-8049-89f8-e5fa3ce6b20c" class="image" style="text-align:left"><a href="image%205.png"><img style="width:1248px" src="image%205.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="3065898a-1e1e-80a9-84a1-fb8de9761053" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="3045898a-1e1e-8055-8587-c77febfda4fa" class="">Assumptions</h3></div><div style="display:contents" dir="auto"><ol type="1" id="3045898a-1e1e-808f-a1ce-ee004c205c68" class="numbered-list" start="1"><li>It is assumed that content for the promotions is already managed via a CMS, where banners and translations are added</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="3045898a-1e1e-8018-a318-c1fc9e075954" class="numbered-list" start="2"><li>It is assumed that the data warehouse is still in its infancy and has yet to create more advanced data aggregations for fine grained player segmentation </li></ol></div><div style="display:contents" dir="auto"><p id="3065898a-1e1e-8012-87f9-e4b6e20c1478" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="3065898a-1e1e-8054-acee-c8b9d5f9feda" class="">Future Enhancements</h3></div><div style="display:contents" dir="auto"><ul id="3065898a-1e1e-809e-9a46-eb71e4aa94ff" class="bulleted-list"><li style="list-style-type:disc">All non MVP items listed above</li></ul></div><div style="display:contents" dir="auto"><ul id="3065898a-1e1e-8027-b91d-f2df626d8c3d" class="bulleted-list"><li style="list-style-type:disc">Further Reward Logic Enhancements<div style="display:contents" dir="auto"><ul id="3065898a-1e1e-80e3-8fa4-de8e452be787" class="bulleted-list"><li style="list-style-type:circle">Multiple Rewards</li></ul></div><div style="display:contents" dir="auto"><ul id="3065898a-1e1e-8073-8a0a-d3a640a4975b" class="bulleted-list"><li style="list-style-type:circle">Reward Chaining</li></ul></div><div style="display:contents" dir="auto"><ul id="3065898a-1e1e-80be-95e6-f6ff53229c19" class="bulleted-list"><li style="list-style-type:circle">Reward Scheduling &amp; Automation </li></ul></div></li></ul></div><div style="display:contents" dir="auto"><ul id="3065898a-1e1e-8076-8070-c56bd7ca7817" class="bulleted-list"><li style="list-style-type:disc">ROI Calculation  </li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
